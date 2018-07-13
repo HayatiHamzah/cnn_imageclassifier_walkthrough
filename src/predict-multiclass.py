@@ -3,6 +3,7 @@ import numpy as np
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 from keras.models import Sequential, load_model
 
+##loading the model previously trained 
 img_width, img_height = 150, 150
 model_path = './models/model.h5'
 model_weights_path = './models/weights.h5'
@@ -26,28 +27,26 @@ def predict(file):
 
   return answer
 
-
+#pre-assign the 0 value to true and false of the labels
 Celine_t = 0
-
 Celine_f = 0
 Chanel_t = 0
 Chanel_f = 0
 Givenchy_t = 0
 Givenchy_f = 0
-
+	  
+	  
+## This section will rename the image if found that it matches with the brand model
 for i, ret in enumerate(os.walk('./test-data/
 	Celine')):
   for i, filename in enumerate(ret[2]):
     if filename.startswith("."):
       continue
-    print("Label: 
-    	Celine")
+    print("Label: Celine")
     result = predict(ret[0] + '/' + filename)
     if result == 0:
-      
       Celine_t += 1
     else:
-      
       Celine_f += 1
 
 for i, ret in enumerate(os.walk('./test-data/Chanel')):
@@ -75,12 +74,8 @@ for i, ret in enumerate(os.walk('./test-data/Givenchy')):
 """
 Check metrics
 """
-print("True 
-	Celine: ", 
-Celine_t)
-print("False 
-	Celine: ", 
-Celine_f)
+print("True Celine: ", Celine_t)
+print("False Celine: ", Celine_f)
 print("True Chanel: ", Chanel_t)
 print("False Chanel: ", Chanel_f)
 print("True Givenchy: ", Givenchy_t)
