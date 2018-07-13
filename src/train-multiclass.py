@@ -1,32 +1,53 @@
 """
 First, you need to collect training data and deploy it like this.
-e.g. 3-classes classification Pizza, Poodle, Rose
+e.g. 3-classes classification 
+Celine, 
+Chanel, 
+Givenchy
   ./data/
     train/
-      pizza/
-        pizza1.jpg
-        pizza2.jpg
+      
+      Celine/
+        
+        Celine1.jpg
+        
+        Celine2.jpg
         ...
-      poodle/
-        poodle1.jpg
-        poodle2.jpg
+      
+      Chanel/
+        
+        Chanel1.jpg
+        
+        Chanel2.jpg
         ...
-      rose/
-        rose1.jpg
-        rose2.jpg
+      
+      Givenchy/
+        
+        Givenchy1.jpg
+        
+        Givenchy2.jpg
         ...
     validation/
-      pizza/
-        pizza1.jpg
-        pizza2.jpg
+      
+      Celine/
+        
+        Celine1.jpg
+        
+        Celine2.jpg
         ...
-      poodle/
-        poodle1.jpg
-        poodle2.jpg
+      
+      Chanel/
+        
+        Chanel1.jpg
+        
+        Chanel2.jpg
         ...
-      rose/
-        rose1.jpg
-        rose2.jpg
+      
+      Givenchy/
+        
+        Givenchy1.jpg
+        
+        Givenchy2.jpg
         ...
 """
 

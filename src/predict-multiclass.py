@@ -17,60 +17,71 @@ def predict(file):
   result = array[0]
   answer = np.argmax(result)
   if answer == 0:
-    print("Label: Pizza")
+    print("Label: 
+    	Celine")
   elif answer == 1:
-    print("Labels: Poodle")
+    print("Labels: Chanel")
   elif answer == 2:
-    print("Label: Rose")
+    print("Label: Givenchy")
 
   return answer
 
-pizza_t = 0
-pizza_f = 0
-poodle_t = 0
-poodle_f = 0
-rose_t = 0
-rose_f = 0
 
-for i, ret in enumerate(os.walk('./test-data/pizza')):
+Celine_t = 0
+
+Celine_f = 0
+Chanel_t = 0
+Chanel_f = 0
+Givenchy_t = 0
+Givenchy_f = 0
+
+for i, ret in enumerate(os.walk('./test-data/
+	Celine')):
   for i, filename in enumerate(ret[2]):
     if filename.startswith("."):
       continue
-    print("Label: Pizza")
+    print("Label: 
+    	Celine")
     result = predict(ret[0] + '/' + filename)
     if result == 0:
-      pizza_t += 1
+      
+      Celine_t += 1
     else:
-      pizza_f += 1
+      
+      Celine_f += 1
 
-for i, ret in enumerate(os.walk('./test-data/poodle')):
+for i, ret in enumerate(os.walk('./test-data/Chanel')):
   for i, filename in enumerate(ret[2]):
     if filename.startswith("."):
       continue
-    print("Label: Poodle")
+    print("Label: Chanel")
     result = predict(ret[0] + '/' + filename)
     if result == 1:
-      poodle_t += 1
+      Chanel_t += 1
     else:
-      poodle_f += 1
+      Chanel_f += 1
 
-for i, ret in enumerate(os.walk('./test-data/rose')):
+for i, ret in enumerate(os.walk('./test-data/Givenchy')):
   for i, filename in enumerate(ret[2]):
     if filename.startswith("."):
       continue
-    print("Label: Rose")
+    print("Label: Givenchy")
     result = predict(ret[0] + '/' + filename)
     if result == 2:
-      rose_t += 1
+      Givenchy_t += 1
     else:
-      rose_f += 1
+      Givenchy_f += 1
 
 """
 Check metrics
 """
-print("True Pizza: ", pizza_t)
-print("False Pizza: ", pizza_f)
-print("True Poodle: ", poodle_t)
-print("False Poodle: ", poodle_f)
-print("True Rose: ", rose_t)
-print("False Rose: ", rose_f)
+print("True 
+	Celine: ", 
+Celine_t)
+print("False 
+	Celine: ", 
+Celine_f)
+print("True Chanel: ", Chanel_t)
+print("False Chanel: ", Chanel_f)
+print("True Givenchy: ", Givenchy_t)
+print("False Givenchy: ", Givenchy_f)
