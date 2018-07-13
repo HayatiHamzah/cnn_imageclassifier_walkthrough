@@ -4,6 +4,9 @@
 
 A Simple Deep Neural Network to classify images made with Keras. This supports binary and multiclass classification.
 
+## Scraping of images
+-------Work in progress-----
+
 ## Requirements
 
   * Keras = 2.x (TensorFlow backend)
