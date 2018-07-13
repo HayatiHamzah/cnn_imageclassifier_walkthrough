@@ -50,7 +50,7 @@ Givenchy
         Givenchy2.jpg
         ...
 """
-
+##import necessary frameworks and packages
 import sys
 import os
 from keras.preprocessing.image import ImageDataGenerator
@@ -63,7 +63,7 @@ from keras import callbacks
 DEV = False
 argvs = sys.argv
 argc = len(argvs)
-
+##setting the number of epochs based on the number of images
 if argc > 1 and (argvs[1] == "--development" or argvs[1] == "-d"):
   DEV = True
 
@@ -76,7 +76,7 @@ train_data_path = './data/train'
 validation_data_path = './data/validation'
 
 """
-Parameters
+Setting the image parameters
 """
 img_width, img_height = 150, 150
 batch_size = 32
